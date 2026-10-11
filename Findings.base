@@ -1,0 +1,66 @@
+filters:
+  and:
+    - note.type == "statement"
+    - note.fed_kind == "finding"
+formulas:
+  severity_rank: if(note.sw_severity == "blocker", 1, if(note.sw_severity == "high", 2, if(note.sw_severity == "medium", 3, 4)))
+properties:
+  note.dcterms_title:
+    displayName: Finding
+  note.sw_severity:
+    displayName: Severity
+  note.sw_logStatus:
+    displayName: Status
+  note.pav_authoredOn:
+    displayName: Found
+  note.dcterms_subject:
+    displayName: Concerns
+  note.dcterms_isPartOf:
+    displayName: Topic
+  note.sw_statusNote:
+    displayName: Status note
+  note.tags:
+    displayName: Tags
+views:
+  - type: table
+    name: Open
+    filters:
+      or:
+        - note.sw_logStatus == "open"
+        - note.sw_logStatus == "in-progress"
+    order:
+      - file.name
+      - dcterms_title
+      - sw_severity
+      - sw_logStatus
+      - pav_authoredOn
+      - dcterms_subject
+      - dcterms_isPartOf
+      - tags
+    sort:
+      - property: formula.severity_rank
+        direction: ASC
+      - property: pav_authoredOn
+        direction: DESC
+  - type: table
+    name: By topic
+    groupBy:
+      property: dcterms_isPartOf
+      direction: ASC
+    order:
+      - file.name
+      - dcterms_title
+      - sw_severity
+      - sw_logStatus
+      - dcterms_subject
+  - type: table
+    name: All by status
+    groupBy:
+      property: sw_logStatus
+      direction: ASC
+    order:
+      - file.name
+      - dcterms_title
+      - sw_severity
+      - pav_authoredOn
+      - dcterms_isPartOf

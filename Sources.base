@@ -1,0 +1,47 @@
+filters:
+  and:
+    - 'note.type == "source"'
+properties:
+  note.dcterms_title:
+    displayName: Source
+  note.dcterms_type:
+    displayName: Type
+  note.dcterms_date:
+    displayName: Date
+  note.pav_retrievedFrom:
+    displayName: Where
+  note.dcterms_isPartOf:
+    displayName: Topic
+  note.fed_condition:
+    displayName: Condition
+views:
+  - type: table
+    name: Repositories
+    filters:
+      and:
+        - 'note.dcterms_type == "Software"'
+    order:
+      - file.name
+      - note.dcterms_title
+      - note.pav_retrievedFrom
+      - note.dcterms_isPartOf
+      - note.dcterms_date
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Other sources
+    filters:
+      and:
+        - 'note.dcterms_type != "Software"'
+        - 'note.fed_kind.isEmpty()'
+    order:
+      - file.name
+      - note.dcterms_title
+      - note.dcterms_type
+      - note.dcterms_date
+      - note.fed_condition
+      - note.pav_retrievedFrom
+    sort:
+      - property: note.dcterms_date
+        direction: DESC

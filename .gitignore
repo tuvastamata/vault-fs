@@ -1,0 +1,8 @@
+# scratch of the build tools (structurizr export, parse results); the wrappers in elements/ and views/ are committed
+_generated/
+# Obsidian: shared settings are committed (.obsidian/templates.json, core-plugins.json, app.json); per-user state is not
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/graph.json
+.obsidian/appearance.json
+.obsidian/hotkeys.json

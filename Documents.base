@@ -1,0 +1,37 @@
+filters:
+  and:
+    - note.type == "source"
+    - or:
+        - note.fed_kind == "runbook"
+        - note.fed_kind == "spec"
+        - note.fed_kind == "cut"
+        - note.fed_kind == "incident"
+        - note.fed_kind == "context"
+        - note.fed_kind == "doc"
+        - note.fed_kind == "diagram"
+properties:
+  note.dcterms_title:
+    displayName: Document
+  note.fed_kind:
+    displayName: Kind
+  note.dcterms_date:
+    displayName: Date
+  note.dcterms_language:
+    displayName: Language
+  note.pav_importedFrom:
+    displayName: Original
+views:
+  - type: table
+    name: By kind
+    groupBy:
+      property: fed_kind
+      direction: ASC
+    order:
+      - file.name
+      - dcterms_title
+      - dcterms_date
+      - dcterms_language
+      - pav_importedFrom
+    sort:
+      - property: dcterms_date
+        direction: DESC

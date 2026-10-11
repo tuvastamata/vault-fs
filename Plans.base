@@ -1,0 +1,59 @@
+filters:
+  and:
+    - note.type != "version"
+    - or:
+        - note.fed_kind == "plan"
+        - note.fed_kind == "analysis"
+properties:
+  note.dcterms_title:
+    displayName: Title
+  note.fed_kind:
+    displayName: Kind
+  note.sw_logStatus:
+    displayName: Status
+  note.pav_authoredOn:
+    displayName: Date
+  note.dcterms_subject:
+    displayName: Concerns
+  note.dcterms_isPartOf:
+    displayName: Topic
+views:
+  - type: table
+    name: Plans
+    filters:
+      and:
+        - note.fed_kind == "plan"
+    order:
+      - file.name
+      - dcterms_title
+      - sw_logStatus
+      - pav_authoredOn
+      - dcterms_isPartOf
+    sort:
+      - property: pav_authoredOn
+        direction: DESC
+  - type: table
+    name: Analyses
+    filters:
+      and:
+        - note.fed_kind == "analysis"
+    order:
+      - file.name
+      - dcterms_title
+      - sw_logStatus
+      - pav_authoredOn
+      - dcterms_isPartOf
+    sort:
+      - property: pav_authoredOn
+        direction: DESC
+  - type: table
+    name: By topic
+    groupBy:
+      property: dcterms_isPartOf
+      direction: ASC
+    order:
+      - file.name
+      - dcterms_title
+      - fed_kind
+      - sw_logStatus
+      - pav_authoredOn

@@ -1,0 +1,67 @@
+filters:
+  and:
+    - 'note.type == "statement"'
+    - 'note.fed_kind == "adr"'
+properties:
+  note.dcterms_title:
+    displayName: Decision
+  note.sw_logStatus:
+    displayName: Status
+  note.pav_authoredOn:
+    displayName: Date
+  note.dcterms_subject:
+    displayName: Concerns
+  note.dcterms_isPartOf:
+    displayName: Topic
+  note.sw_statusNote:
+    displayName: Status note
+views:
+  - type: table
+    name: In force
+    filters:
+      and:
+        - 'note.sw_logStatus == "accepted"'
+    order:
+      - file.name
+      - note.dcterms_title
+      - note.pav_authoredOn
+      - note.dcterms_subject
+      - note.dcterms_isPartOf
+      - note.sw_statusNote
+    sort:
+      - property: note.pav_authoredOn
+        direction: DESC
+  - type: table
+    name: Proposed
+    filters:
+      and:
+        - 'note.sw_logStatus == "proposed"'
+    order:
+      - file.name
+      - note.dcterms_title
+      - note.pav_authoredOn
+      - note.dcterms_subject
+      - note.sw_statusNote
+  - type: table
+    name: By topic
+    groupBy:
+      property: note.dcterms_isPartOf
+      direction: ASC
+    order:
+      - file.name
+      - note.dcterms_title
+      - note.sw_logStatus
+      - note.pav_authoredOn
+  - type: table
+    name: All by status
+    groupBy:
+      property: note.sw_logStatus
+      direction: ASC
+    order:
+      - file.name
+      - note.dcterms_title
+      - note.pav_authoredOn
+      - note.dcterms_isPartOf
+    sort:
+      - property: note.pav_authoredOn
+        direction: DESC

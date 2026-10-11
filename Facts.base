@@ -1,0 +1,37 @@
+filters:
+  and:
+    - note.type == "statement"
+    - note.fed_kind == "fact"
+properties:
+  note.dcterms_title:
+    displayName: Fact
+  note.dcterms_subject:
+    displayName: Concerns
+  note.dcterms_isPartOf:
+    displayName: Topic
+  note.pav_authoredOn:
+    displayName: As of
+  note.fed_status:
+    displayName: Review
+views:
+  - type: table
+    name: By topic
+    groupBy:
+      property: dcterms_isPartOf
+      direction: ASC
+    order:
+      - file.name
+      - dcterms_title
+      - dcterms_subject
+      - pav_authoredOn
+  - type: table
+    name: To review
+    filters:
+      and:
+        - note.fed_status == "proposed"
+    order:
+      - file.name
+      - dcterms_title
+      - dcterms_subject
+      - dcterms_isPartOf
+      - pav_authoredOn

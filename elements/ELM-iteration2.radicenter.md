@@ -1,0 +1,53 @@
+---
+id: ELM-iteration2.radicenter
+type: element
+dcterms_identifier: iteration2.radicenter
+sw_kind: deploymentNode
+sw_environment: Iteration 2 - target
+sw_technology: DirectAdmin mail
+sw_tags: [Element, Deployment Node]
+sw_views: ["[[VIEW-fs-deployment-iteration-2]]"]
+dcterms_language: en
+prov_wasDerivedFrom: ["[[SRC-fs-workspace-dsl]]"]
+pav_createdWith: structurizr-wrap.py
+---
+
+# iteration2.radicenter — Radicenter mail hosting
+
+Deployment node · environment **Iteration 2 - target**.
+
+**Technology:** DirectAdmin mail
+
+## Hosts
+
+- [[ELM-mail.order]] — order@factory.sale
+- [[ELM-mail.sales]] — sales@factory.sale
+
+## Views
+
+- [[VIEW-fs-deployment-iteration-2]] — Deployment View: Iteration 2 - target
+
+## Records
+
+Hazards, decisions and deferred changes that refer to this element (live query):
+
+```base
+filters:
+  and:
+    - 'note.type == "statement"'
+    - 'file.hasLink(this.file)'
+views:
+  - type: table
+    name: Records
+    groupBy:
+      property: note.fed_kind
+      direction: ASC
+    order:
+      - file.name
+      - note.dcterms_title
+      - note.sw_logStatus
+      - note.sw_severity
+```
+
+---
+*Built by `structurizr-wrap.py` from the model parsed out of [[SRC-fs-workspace-dsl]] (class 3): do not edit — rebuild.*
