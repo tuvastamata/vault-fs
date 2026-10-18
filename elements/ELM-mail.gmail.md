@@ -16,7 +16,7 @@ pav_createdWith: structurizr-wrap.py
 
 Container of [[ELM-mail]] (Email channels) · tags `Mailbox`, `Iteration1`.
 
-Gmail inbox of the operator: order@ is redirected here; for iteration 1 sales@ is forwarded here too (forward-with-copy), sales@ is a send-as alias, and the two streams are separated by the labels transport-sales and transport-orders.
+Gmail inbox of the operator and the account connected to Claude Desktop: order@ is redirected here; sales@factory.sale is a working send-as alias on it (two of three test mails of 2026-08-27 went out as 'Eva Prual / Factory.Sale <sales@factory.sale>', FIND-FS-0007), whether sales@ mail also arrives here is unconfirmed (open setup item 1); the planned separation of the two streams is by the labels transport-sales and transport-orders (ADR-FS-0009). Order notifications share one subject, so unrelated inquiries thread together (FIND-FS-0004).
 
 **Technology:** Gmail
 

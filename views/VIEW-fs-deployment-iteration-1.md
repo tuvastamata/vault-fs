@@ -44,7 +44,7 @@ Where the iteration-1 tooling runs
 - [[ELM-iteration1.wordpress]] — WordPress hosting (deployment node)
   - [[ELM-woocommerce]] — WooCommerce shop
 
-## Relationships (10 distinct, 12 in the view)
+## Relationships (11 distinct, 13 in the view)
 
 - [[ELM-desktop.chrome]] → [[ELM-woocommerce]] — Reads product data through the WordPress admin (interim) *(HTTPS)*
 - [[ELM-desktop.driveConnector]] → [[ELM-drive]] — Reads and writes captures and the offer log *(Drive API)*
@@ -56,6 +56,7 @@ Where the iteration-1 tooling runs
 - [[ELM-mail.gmail]] → [[ELM-mail.sales]] — Sends as sales@factory.sale (send-as alias) *(SMTP 465)*
 - [[ELM-mail.order]] → [[ELM-mail.gmail]] — Redirected *(mail forwarding)*
 - [[ELM-mail.sales]] → [[ELM-mail.gmail]] — Forwarded with copy, labelled transport-sales (iteration 1) *(mail forwarding)*
+- [[ELM-woocommerce]] → [[ELM-mail.order]] — Order notification 'Uus Factory.Sale päring' *(email)*
 
 ---
 *Built by `structurizr-wrap.py` from the model parsed out of [[SRC-fs-workspace-dsl]] (class 3): do not edit — rebuild.*

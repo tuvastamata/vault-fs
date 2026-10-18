@@ -17,7 +17,7 @@ pav_createdWith: structurizr-wrap.py
 
 Infrastructure node of [[ELM-iteration1.developerMachine]] (Developer machine) · environment **Iteration 1 - Wizard-of-Oz**.
 
-~/factory.sale/fs-vault-sync: a copy of the shared folder pulled by hand (last on 2026-08-27).
+~/factory.sale/fs-vault-sync: a copy of the shared folder pulled by hand (2026-08-27, 2026-10-11).
 
 **Technology:** rclone, remote andrei:
 

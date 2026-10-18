@@ -16,7 +16,7 @@ pav_createdWith: structurizr-wrap.py
 
 Container of [[ELM-mail]] (Email channels) · tags `Mailbox`.
 
-Order-intake address of the factory.sale domain, redirected to the operator's Gmail inbox. Read by a human (process step 3); the agent never reads it.
+Order-intake address of the factory.sale domain, redirected to the operator's Gmail inbox. Receives the shop's order notification 'Uus Factory.Sale päring': product name, quantity, price, customer and delivery details, no dimensions (FIND-FS-0009). Read by a human (process step 3); the agent never reads it.
 
 **Technology:** factory.sale mail
 
@@ -28,7 +28,7 @@ Order-intake address of the factory.sale domain, redirected to the operator's Gm
 
 ### Incoming
 
-- ← [[ELM-customer]] — Sends an order inquiry *(email)*
+- ← [[ELM-woocommerce]] — Order notification 'Uus Factory.Sale päring' *(email)*
 
 ## Deployed
 

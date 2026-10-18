@@ -43,7 +43,7 @@ Where the service would run; the agent host is not decided
 - [[ELM-iteration2.wordpress]] — WordPress hosting (deployment node)
   - [[ELM-woocommerce]] — WooCommerce shop
 
-## Relationships (17)
+## Relationships (18)
 
 - [[ELM-bitrix24]] → [[ELM-fs.api]] — Order inquiry webhook *(HTTPS, POST /v1/webhooks/bitrix24)*
 - [[ELM-desktop.vault]] → [[ELM-drive]] — Mirrored to and from the shared folder *(Google Drive for desktop)*
@@ -62,6 +62,7 @@ Where the service would run; the agent host is not decided
 - [[ELM-mail.gmail]] → [[ELM-mail.sales]] — Sends as sales@factory.sale (send-as alias) *(SMTP 465)*
 - [[ELM-mail.order]] → [[ELM-mail.gmail]] — Redirected *(mail forwarding)*
 - [[ELM-mail.sales]] → [[ELM-mail.gmail]] — Forwarded with copy, labelled transport-sales (iteration 1) *(mail forwarding)*
+- [[ELM-woocommerce]] → [[ELM-mail.order]] — Order notification 'Uus Factory.Sale päring' *(email)*
 
 ---
 *Built by `structurizr-wrap.py` from the model parsed out of [[SRC-fs-workspace-dsl]] (class 3): do not edit — rebuild.*

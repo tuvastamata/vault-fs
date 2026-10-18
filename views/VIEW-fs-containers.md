@@ -15,9 +15,10 @@ container view of [[ELM-fs]] (FS Transportation Selection Agent) · automatic la
 
 Containers of the agent service and what they talk to
 
-## Elements (12)
+## Elements (13)
 
 - [[ELM-bitrix24]] — Bitrix24 (software system)
+- [[ELM-customer]] — Customer (person)
 - [[ELM-fs.api]] — API gateway (container)
 - [[ELM-fs.cache]] — Cache (container)
 - [[ELM-fs.dashboard]] — Review dashboard (container)
@@ -30,13 +31,14 @@ Containers of the agent service and what they talk to
 - [[ELM-operator]] — Transportation operator (person)
 - [[ELM-orderWebhook]] — Order webhook consumer (software system)
 
-## Relationships (16)
+## Relationships (18)
 
 - [[ELM-bitrix24]] → [[ELM-fs.api]] — Order inquiry webhook *(HTTPS, POST /v1/webhooks/bitrix24)*
 - [[ELM-fs.api]] → [[ELM-fs.cache]] — Throttling, session tokens *(Redis protocol)*
 - [[ELM-fs.api]] → [[ELM-fs.engine]] — Triggers or resumes the graph thread *(in-process)*
 - [[ELM-fs.dashboard]] → [[ELM-fs.api]] — Lists pending reviews; submits approve or reject *(REST)*
 - [[ELM-fs.engine]] → [[ELM-bitrix24]] — Reads order and product data *(Bitrix24 REST API)*
+- [[ELM-fs.engine]] → [[ELM-customer]] — Price offer; waits for the customer's yes *(email)*
 - [[ELM-fs.engine]] → [[ELM-fs.db]] — Checkpoints the state; stores offers, comparison lists and audits *(SQL)*
 - [[ELM-fs.engine]] → [[ELM-fs.db]] — Flushes the state at the interrupt (PostgresSaver) *(SQL)*
 - [[ELM-fs.engine]] → [[ELM-fs.mailAdapter]] — Sends inquiries, follow-ups and confirmation requests *(in-process)*
@@ -46,6 +48,7 @@ Containers of the agent service and what they talk to
 - [[ELM-fs.mailAdapter]] → [[ELM-fs.engine]] — Delivers partner replies *(in-process)*
 - [[ELM-fs.mailAdapter]] → [[ELM-mail]] — Sends as sales@; reads partner replies *(IMAP 993 / SMTP 465)*
 - [[ELM-operator]] → [[ELM-bitrix24]] — Transfers the inquiry from email; reads order and product data *(browser)*
+- [[ELM-operator]] → [[ELM-customer]] — Sends the customer price offer personally; waits for the yes *(email)*
 - [[ELM-operator]] → [[ELM-fs.dashboard]] — Reviews the recommended offer; approves or rejects; sets fast-track *(browser)*
 - [[ELM-operator]] → [[ELM-mail]] — Reads order inquiries (transport-orders) and partner mail (transport-sales) *(Gmail web)*
 

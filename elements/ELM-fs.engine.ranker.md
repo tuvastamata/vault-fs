@@ -16,7 +16,7 @@ pav_createdWith: structurizr-wrap.py
 
 Component of [[ELM-fs.engine]] (Orchestration engine).
 
-Computes price_apply = price_offer x 1.3, compiles the comparison list and ranks: a transparent scoring rule first (best price, then delivery time), a decision tree once the labelled offer log supports it (FR-4.02 to FR-4.04, ADR-FS-0007).
+Computes price_apply = price_offer x 1.3, compiles the comparison list and ranks: first the eligibility filter by destination and customer type (Delamode alone declares customs for private customers to the UK, Northern Ireland and Norway), then the trusted partner unless a competitor is more than 10 % cheaper, delivery time as the tiebreaker; quality means fewer damages, better communication, accurate delivery times (FR-4.02 to FR-4.04; ADR-FS-0014 replacing 'best price, then delivery time'; a decision tree later, ADR-FS-0007). The chosen column of the offer log alone would teach the wrong rule.
 
 **Technology:** LangGraph node, scikit-learn later
 

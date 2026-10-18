@@ -16,7 +16,7 @@ pav_createdWith: structurizr-wrap.py
 
 Container of [[ELM-mail]] (Email channels) · tags `Mailbox`.
 
-Dedicated transport channel: outreach, follow-ups and confirmation requests are sent from it, offers and confirmations arrive to it. Domain registered at zone.ee, mailbox hosted at Radicenter: IMAP 993 and SMTP 465, no API; the host name is to be confirmed in the Radicenter panel.
+Dedicated transport channel: outreach, follow-ups and confirmation requests are sent from it, offers and confirmations arrive to it. Domain registered at zone.ee, mailbox hosted at Radicenter: IMAP 993 and SMTP 465, no API; the host name is to be confirmed in the Radicenter panel. Delamode's request of Deal #7131 went out from it by hand, through the Gmail alias (FIND-FS-0013).
 
 **Technology:** Radicenter mailbox (DirectAdmin)
 

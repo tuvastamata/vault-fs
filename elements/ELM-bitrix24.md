@@ -14,17 +14,18 @@ pav_createdWith: structurizr-wrap.py
 
 Software system · tags `External`.
 
-CRM of factory.sale: order and product records (width, height, length, weight, quantity). Order data enters the process from here, never from email. No first-party Claude connector: browser and paste in iteration 1, REST webhooks later.
+CRM of factory.sale: order and product records (width, height, length, weight, quantity). Order data enters the process from here, never from email. No first-party Claude connector: browser and paste in iteration 1, REST webhooks later. Can send partner outreach itself, outside Gmail (Gerava, Deal #7131, 2026-09-09); the Bitrix24-Gmail connection is being worked on (open setup item 10, HZ-FS-0003).
 
 ## Properties
 
-- evidence: `fs:vault/10-spec/SRS.md@89d77d2 FR-1.01; fs:SETUP.md@89d77d2 Part D; fs:vault/20-decisions/ADR-0009-separate-transport-email-channel.md@89d77d2`
+- evidence: `fs:vault/10-spec/SRS.md@89d77d2 FR-1.01; fs:SETUP.md@89d77d2 Part D; fs:vault/20-decisions/ADR-0009-separate-transport-email-channel.md@89d77d2; fs-vault-sync:vault-ops/operating/findings-inbox/finding-2026-09-09-gerava-no-email-trail.md`
 
 ## Relationships
 
 ### Outgoing
 
 - → [[ELM-fs.api]] — Order inquiry webhook *(HTTPS, POST /v1/webhooks/bitrix24)*
+- → [[ELM-partner]] — Partner outreach sent directly from Bitrix24 (Gerava, Deal #7131) - invisible in Gmail *(email)*
 
 ### Incoming
 

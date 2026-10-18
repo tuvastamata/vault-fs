@@ -4,7 +4,7 @@ type: element
 dcterms_identifier: customer
 sw_kind: person
 sw_tags: [Element, Person, External]
-sw_views: ["[[VIEW-fs-landscape]]", "[[VIEW-fs-email-channels]]"]
+sw_views: ["[[VIEW-fs-landscape]]", "[[VIEW-fs-context]]", "[[VIEW-fs-containers]]", "[[VIEW-fs-engine-components]]"]
 dcterms_language: en
 prov_wasDerivedFrom: ["[[SRC-fs-workspace-dsl]]"]
 pav_createdWith: structurizr-wrap.py
@@ -14,24 +14,25 @@ pav_createdWith: structurizr-wrap.py
 
 Person · tags `External`.
 
-Places an order with factory.sale; the inquiry arrives at order@factory.sale.
+Places an order in the factory.sale shop; the shop's order notification arrives at order@factory.sale. Says yes to the marked-up transport price before any partner is confirmed (ADR-FS-0015).
 
 ## Relationships
 
 ### Outgoing
 
-- → [[ELM-mail.order]] — Sends an order inquiry *(email)*
+- → [[ELM-woocommerce]] — Places an order *(web shop)*
 
-### Implied
+### Incoming
 
-Derived by the parser from relationships of children; the fact lives in the origin relationship.
-
-- → [[ELM-mail]] — Sends an order inquiry *(email)* · from [[ELM-customer]] → [[ELM-mail.order]]
+- ← [[ELM-fs.engine.customerConfirm]] — Price offer; waits for the customer's yes *(email)*
+- ← [[ELM-operator]] — Sends the customer price offer personally; waits for the yes *(email)*
 
 ## Views
 
 - [[VIEW-fs-landscape]] — System Landscape View
-- [[VIEW-fs-email-channels]] — Container View: Email channels
+- [[VIEW-fs-context]] — System Context View: FS Transportation Selection Agent
+- [[VIEW-fs-containers]] — Container View: FS Transportation Selection Agent
+- [[VIEW-fs-engine-components]] — Component View: FS Transportation Selection Agent - Orchestration engine
 
 ## Records
 

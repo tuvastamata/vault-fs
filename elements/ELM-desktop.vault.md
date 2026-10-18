@@ -16,7 +16,7 @@ pav_createdWith: structurizr-wrap.py
 
 Container of [[ELM-desktop]] (Claude Desktop (company account)) · tags `Folder`, `Iteration1`.
 
-Plain folder on the machine's disk opened as the working folder: operating checklist, approval gate, timeouts, offer-log guide, findings-inbox and the process-discovery skill (vault-ops for the operator, vault-sh for stakeholders). Seeded from the repository, synced to fs-vault-sync by Google Drive for desktop.
+Plain folder on the machine's disk opened as the working folder: operating checklist, approval gate, timeouts, offer-log guide, findings-inbox and the process-discovery skill (vault-ops for the operator, vault-sh for stakeholders). Seeded from the repository, synced to fs-vault-sync by Google Drive for desktop. The operator's copy carries the discovery round of 2026-08-27 ... 2026-09-16 (reference rules, maps, interview, report, opportunities, open setup items) that the repository has not absorbed (DC-FS-0003).
 
 **Technology:** Markdown folder (Obsidian)
 

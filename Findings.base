@@ -25,9 +25,11 @@ views:
   - type: table
     name: Open
     filters:
-      or:
-        - note.sw_logStatus == "open"
-        - note.sw_logStatus == "in-progress"
+      and:
+        - '!file.hasTag("nav/opportunity")'
+        - or:
+            - note.sw_logStatus == "open"
+            - note.sw_logStatus == "in-progress"
     order:
       - file.name
       - dcterms_title
@@ -64,3 +66,20 @@ views:
       - sw_severity
       - pav_authoredOn
       - dcterms_isPartOf
+  - type: table
+    name: Opportunities
+    filters:
+      and:
+        - 'file.hasTag("nav/opportunity")'
+    order:
+      - file.name
+      - dcterms_title
+      - sw_severity
+      - sw_logStatus
+      - sw_statusNote
+      - dcterms_subject
+    sort:
+      - property: formula.severity_rank
+        direction: ASC
+      - property: file.name
+        direction: ASC

@@ -25,12 +25,13 @@ Claude Desktop on the company account: connectors, the browser, the instance vau
 - [[ELM-mail]] — Email channels (software system)
 - [[ELM-woocommerce]] — WooCommerce shop (software system)
 
-## Relationships (4)
+## Relationships (5)
 
 - [[ELM-desktop.chrome]] → [[ELM-woocommerce]] — Reads product data through the WordPress admin (interim) *(HTTPS)*
 - [[ELM-desktop.driveConnector]] → [[ELM-drive]] — Reads and writes captures and the offer log *(Drive API)*
 - [[ELM-desktop.gmailConnector]] → [[ELM-mail]] — Searches, drafts and sends with per-action approval; scope label:transport-sales *(Gmail API)*
 - [[ELM-desktop.vault]] → [[ELM-drive]] — Mirrored to and from the shared folder *(Google Drive for desktop)*
+- [[ELM-woocommerce]] → [[ELM-mail]] — Order notification 'Uus Factory.Sale päring' *(email)*
 
 ---
 *Built by `structurizr-wrap.py` from the model parsed out of [[SRC-fs-workspace-dsl]] (class 3): do not edit — rebuild.*

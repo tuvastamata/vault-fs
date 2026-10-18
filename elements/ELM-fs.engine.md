@@ -23,6 +23,7 @@ Stateful LangGraph graph of the process with a Pydantic state (is_standard_palle
 ## Contains
 
 - [[ELM-fs.engine.classify]] — Pallet classifier (component)
+- [[ELM-fs.engine.customerConfirm]] — Customer price confirmation (component)
 - [[ELM-fs.engine.hitl]] — Human review interrupt (component)
 - [[ELM-fs.engine.outreach]] — Outreach and follow-up (component)
 - [[ELM-fs.engine.parseEmail]] — Email parser (component)
@@ -47,6 +48,7 @@ Stateful LangGraph graph of the process with a Pydantic state (is_standard_palle
 Derived by the parser from relationships of children; the fact lives in the origin relationship.
 
 - → [[ELM-bitrix24]] — Reads order and product data *(Bitrix24 REST API)* · from [[ELM-fs.engine.readOrder]] → [[ELM-bitrix24]]
+- → [[ELM-customer]] — Price offer; waits for the customer's yes *(email)* · from [[ELM-fs.engine.customerConfirm]] → [[ELM-customer]]
 - → [[ELM-fs.db]] — Flushes the state at the interrupt (PostgresSaver) *(SQL)* · from [[ELM-fs.engine.hitl]] → [[ELM-fs.db]]
 - → [[ELM-fs.mailAdapter]] — Sends inquiries, follow-ups and confirmation requests *(in-process)* · from [[ELM-fs.engine.outreach]] → [[ELM-fs.mailAdapter]]
 - → [[ELM-llm]] — Structured extraction of offers and confirmations *(HTTPS)* · from [[ELM-fs.engine.parseEmail]] → [[ELM-llm]]

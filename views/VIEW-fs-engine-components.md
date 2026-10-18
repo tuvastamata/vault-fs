@@ -15,11 +15,13 @@ component view of [[ELM-fs.engine]] (Orchestration engine) · automatic layout L
 
 The LangGraph nodes of the process and their external calls
 
-## Elements (13)
+## Elements (15)
 
 - [[ELM-bitrix24]] — Bitrix24 (software system)
+- [[ELM-customer]] — Customer (person)
 - [[ELM-fs.db]] — Database (container)
 - [[ELM-fs.engine.classify]] — Pallet classifier (component)
+- [[ELM-fs.engine.customerConfirm]] — Customer price confirmation (component)
 - [[ELM-fs.engine.hitl]] — Human review interrupt (component)
 - [[ELM-fs.engine.outreach]] — Outreach and follow-up (component)
 - [[ELM-fs.engine.parseEmail]] — Email parser (component)
@@ -31,8 +33,9 @@ The LangGraph nodes of the process and their external calls
 - [[ELM-llm]] — LLM API (software system)
 - [[ELM-orderWebhook]] — Order webhook consumer (software system)
 
-## Relationships (6)
+## Relationships (7)
 
+- [[ELM-fs.engine.customerConfirm]] → [[ELM-customer]] — Price offer; waits for the customer's yes *(email)*
 - [[ELM-fs.engine.hitl]] → [[ELM-fs.db]] — Flushes the state at the interrupt (PostgresSaver) *(SQL)*
 - [[ELM-fs.engine.outreach]] → [[ELM-fs.mailAdapter]] — Sends inquiries, follow-ups and confirmation requests *(in-process)*
 - [[ELM-fs.engine.parseEmail]] → [[ELM-llm]] — Structured extraction of offers and confirmations *(HTTPS)*

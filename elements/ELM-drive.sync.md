@@ -16,7 +16,7 @@ pav_createdWith: structurizr-wrap.py
 
 Container of [[ELM-drive]] (Google Drive shared folders) · tags `Folder`, `Iteration1`.
 
-Hub of the hub-and-spoke documentation flow: the operator and stakeholder instances (vault-ops, vault-sh) pushed by Google Drive for desktop, a findings-inbox for quick drops, the offer log. The developer pulls it as an rclone snapshot.
+Hub of the hub-and-spoke documentation flow: the operator and stakeholder instances (vault-ops, vault-sh) pushed by Google Drive for desktop, a findings-inbox for quick drops, the offer log. The developer pulls it as an rclone snapshot. Since the discovery round of 2026-08-27 ... 2026-09-16 vault-ops also holds the product dimension sheet data/huum-toodete-kaalud-moodud.xlsx (SRC-20260827-huum-product-sheet), the reference rules, the discovery maps, the interview, the report, six opportunities and the open setup items.
 
 **Technology:** Google Drive folder
 

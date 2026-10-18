@@ -45,3 +45,5 @@ No LangGraph stack is built. Human approval is required before any outbound part
 
 ## Retro
 _(fill at end of iteration)_
+
+**Update 2026-10-11:** the operator's side ran what this plan calls discovery — a live test run on 2026-08-27 with three colleagues as stand-in partners (paused at the comparison, [[FIND-FS-0006]]), the walkthrough of the real Deal #7131 on 2026-09-09 (reconstructed from the mailbox, not run by the agent, [[FIND-FS-0013]]) and the closing interview on 2026-09-16 ([[FACT-FS-0002]]). The agent-assisted process has not run end to end on a real inquiry; the operator's rules are [[ADR-FS-0013]] … [[ADR-FS-0016]]; the curation of the round into the repository is [[DC-FS-0003]].

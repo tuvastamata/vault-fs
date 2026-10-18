@@ -1,6 +1,6 @@
 # Elements — wrappers of the Structurizr model (built)
 
-Built by `structurizr-wrap.py` from the workspace *FS Transportation Selection Agent* — workspace JSON supplied by the caller (`structurizr-cli export -format json` of `structurizr/workspace.dsl`); DSL sha256 `552acd54bb2b074325498793b96aad703208f952cc7e2b01203d85cd26070743`; passport [[SRC-fs-workspace-dsl]]. Class 3: do not edit — rebuild. 62 elements, 9 views.
+Built by `structurizr-wrap.py` from the workspace *FS Transportation Selection Agent* — workspace JSON supplied by the caller (`structurizr-cli export -format json` of `structurizr/workspace.dsl`); DSL sha256 `bb9cbaaab50545b1183470d4a6dcbd15a86d769132d1f0c52eb6be50f9d49ed6`; passport [[SRC-fs-workspace-dsl]]. Class 3: do not edit — rebuild. 64 elements, 9 views.
 
 Keys are DSL identifiers (`ELM-<identifier>`); instances are listed under the deployment nodes that host them.
 
@@ -14,6 +14,7 @@ Keys are DSL identifiers (`ELM-<identifier>`); instances are listed under the de
 
 ## Software systems
 
+- [[ELM-aceTool]] — ACE price-request tool (Raktio Oy)
 - [[ELM-bitrix24]] — Bitrix24
 - [[ELM-desktop]] — Claude Desktop (company account)
   - [[ELM-desktop.chrome]] — Chrome (Claude in Chrome) (container)
@@ -32,6 +33,7 @@ Keys are DSL identifiers (`ELM-<identifier>`); instances are listed under the de
   - [[ELM-fs.db]] — Database (container)
   - [[ELM-fs.engine]] — Orchestration engine (container)
     - [[ELM-fs.engine.classify]] — Pallet classifier (component)
+    - [[ELM-fs.engine.customerConfirm]] — Customer price confirmation (component)
     - [[ELM-fs.engine.hitl]] — Human review interrupt (component)
     - [[ELM-fs.engine.outreach]] — Outreach and follow-up (component)
     - [[ELM-fs.engine.parseEmail]] — Email parser (component)

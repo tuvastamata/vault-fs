@@ -16,7 +16,7 @@ pav_createdWith: structurizr-wrap.py
 
 Component of [[ELM-fs.engine]] (Orchestration engine).
 
-LangGraph state interruption before the human-review node; the graph resumes on the dashboard decision and drops a rejected offer (FR-5.01 to FR-5.03).
+LangGraph state interruption before the human-review node; the graph resumes on the dashboard decision and drops a rejected offer (FR-5.01 to FR-5.03). The final offer choice stays with the operator; the approval of every outbound email is a graduated control that lifts after 20 successful full cycles on the operator's explicit go-ahead (ADR-FS-0016).
 
 **Technology:** LangGraph interrupt
 

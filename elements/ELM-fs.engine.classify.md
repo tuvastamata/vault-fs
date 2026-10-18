@@ -16,7 +16,7 @@ pav_createdWith: structurizr-wrap.py
 
 Component of [[ELM-fs.engine]] (Orchestration engine).
 
-Deterministic: is_standard_pallet from size, quantity and weight; derives n_transported_pallets (FR-1.02, ADR-FS-0001).
+Deterministic: is_standard_pallet from the dimensions and weight looked up per product in the HUUM sheet - never from the order mail, which carries none - against L 1200 x W 800 x H 1000 mm and 200 kg, for a single item and for the sum of a multi-item order; derives n_transported_pallets (FR-1.02, ADR-FS-0001, ADR-FS-0013).
 
 **Technology:** LangGraph node
 

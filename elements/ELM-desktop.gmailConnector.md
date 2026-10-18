@@ -16,7 +16,7 @@ pav_createdWith: structurizr-wrap.py
 
 Container of [[ELM-desktop]] (Claude Desktop (company account)) · tags `Iteration1`.
 
-Native connector, one Google account; searches, drafts and sends from verified aliases with per-action approval, which is the approval gate. The agent's scope is the label transport-sales only.
+Native connector, one Google account; searches, drafts and sends with per-action approval, which is the approval gate. It has no from parameter: mail goes out as the account's own address or as a verified alias picked by the human in the Gmail UI (FIND-FS-0007, FIND-FS-0008). The agent's scope is the label transport-sales only.
 
 **Technology:** Anthropic connector
 

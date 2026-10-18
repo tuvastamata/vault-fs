@@ -14,7 +14,7 @@ pav_createdWith: structurizr-wrap.py
 
 Person · tags `External`.
 
-Carrier that receives inquiries and follow-ups and replies with offers and confirmations by email.
+Carrier that receives inquiries and follow-ups and replies with offers and confirmations by email. Named so far: ACE Logistics (its own request tool, replies within the hour), Delamode (manual email; declares customs for private customers to the UK, Northern Ireland and Norway), Gerava (reached from Bitrix24) - PER-ace, PER-delamode, PER-gerava.
 
 ## Relationships
 
@@ -24,6 +24,8 @@ Carrier that receives inquiries and follow-ups and replies with offers and confi
 
 ### Incoming
 
+- ← [[ELM-aceTool]] — Structured price request from askforoffer@ace.ee *(email)*
+- ← [[ELM-bitrix24]] — Partner outreach sent directly from Bitrix24 (Gerava, Deal #7131) - invisible in Gmail *(email)*
 - ← [[ELM-mail.sales]] — Inquiry, follow-up, confirmation request *(email)*
 
 ### Implied

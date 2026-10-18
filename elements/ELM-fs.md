@@ -42,6 +42,7 @@ The iteration-2 service: reads order data from Bitrix24, classifies pallets, pri
 Derived by the parser from relationships of children; the fact lives in the origin relationship.
 
 - → [[ELM-bitrix24]] — Reads order and product data *(Bitrix24 REST API)* · from [[ELM-fs.engine.readOrder]] → [[ELM-bitrix24]]
+- → [[ELM-customer]] — Price offer; waits for the customer's yes *(email)* · from [[ELM-fs.engine.customerConfirm]] → [[ELM-customer]]
 - → [[ELM-langsmith]] — Traces per thread, prompt logging *(HTTPS)* · from [[ELM-fs.engine]] → [[ELM-langsmith]]
 - → [[ELM-llm]] — Structured extraction of offers and confirmations *(HTTPS)* · from [[ELM-fs.engine.parseEmail]] → [[ELM-llm]]
 - → [[ELM-mail]] — Sends as sales@; reads partner replies *(IMAP 993 / SMTP 465)* · from [[ELM-fs.mailAdapter]] → [[ELM-mail.sales]]

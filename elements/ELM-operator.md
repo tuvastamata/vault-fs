@@ -14,13 +14,15 @@ pav_createdWith: structurizr-wrap.py
 
 Person.
 
-factory.sale staff member who runs the partner-selection process day to day and approves every outbound partner email - the approval gate.
+factory.sale staff member who runs the partner-selection process day to day, alone and end to end: about two years in the role, 5-20 inquiries a week (interview of 2026-09-16). Looks dimensions up in the HUUM sheet, re-keys ACE requests, filters partners by destination and customer type, chooses by the 10 % rule, sends the customer price offer personally and approves every outbound email until 20 successful cycles are done (ADR-FS-0013 ... ADR-FS-0016).
 
 ## Relationships
 
 ### Outgoing
 
+- → [[ELM-aceTool]] — Re-keys the shipment data to trigger ACE's price request *(web form (to confirm))*
 - → [[ELM-bitrix24]] — Transfers the inquiry from email; reads order and product data *(browser)*
+- → [[ELM-customer]] — Sends the customer price offer personally; waits for the yes *(email)*
 - → [[ELM-desktop]] — Runs the process by hand with the agent; approves every outbound email *(Claude Desktop)*
 - → [[ELM-drive.offerLog]] — Logs every offer and which one was chosen *(Google Sheets)*
 - → [[ELM-fs.dashboard]] — Reviews the recommended offer; approves or rejects; sets fast-track *(browser)*
