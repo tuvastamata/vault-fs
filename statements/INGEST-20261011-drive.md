@@ -45,3 +45,5 @@ The owner asked for the sweep after the finding that the shared folder was not d
 2. Accept or correct the four decisions of the operator and the two hazards (`fed.py accept`), or leave them proposed.
 3. The curation into the repository ([[DC-FS-0003]]) by the project's process — a separate piece of work, with the eleven uncommitted files decided first ([[DC-FS-0002]]).
 4. Tell the operator's side nothing is lost: the round is read; the open setup items 1, 2, 5, 9, 10, 14 wait for answers on their side.
+
+**Update 2026-10-18:** act 1 done (vault-fs `1452d36`, metavault `25a7a27`); `PER-fs-operator` deleted at the owner's request — the four decisions and the round's attributions carry `eva` ([[PER-eva]]). Acts 2–4 open.
