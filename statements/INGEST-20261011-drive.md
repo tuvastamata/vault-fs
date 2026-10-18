@@ -47,3 +47,5 @@ The owner asked for the sweep after the finding that the shared folder was not d
 4. Tell the operator's side nothing is lost: the round is read; the open setup items 1, 2, 5, 9, 10, 14 wait for answers on their side.
 
 **Update 2026-10-18:** act 1 done (vault-fs `1452d36`, metavault `25a7a27`); `PER-fs-operator` deleted at the owner's request — the four decisions and the round's attributions carry `eva` ([[PER-eva]]). Acts 2–4 open.
+
+**Update 2026-10-18, later:** act 2 done — the four decisions of the operator ([[ADR-FS-0013]] … [[ADR-FS-0016]]) and the two hazards ([[HZ-FS-0003]], [[HZ-FS-0004]]) accepted by the owner (`fed.py accept`, `dcterms_dateAccepted: 2026-10-18`). Acts 3–4 open.

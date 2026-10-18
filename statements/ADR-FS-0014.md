@@ -3,10 +3,10 @@ id: ADR-FS-0014
 type: statement
 fed_kind: adr
 fed_modality: decision
-fed_status: proposed
+fed_status: accepted
 pav_authoredBy: eva
 pav_createdBy: claude-agent
-pav_createdWith: "Claude (Fable 5.1)"
+pav_createdWith: Claude (Fable 5.1)
 pav_authoredOn: 2026-09-09
 dcterms_title: "Offer selection: eligibility by destination and customer type first, then the trusted partner unless a competitor is more than 10 % cheaper"
 dcterms_language: en
@@ -17,8 +17,10 @@ dcterms_subject: ["[[ELM-fs.engine.ranker]]", "[[ELM-fs.engine.outreach]]", "[[E
 dcterms_isPartOf: ["[[LINE-fs-pricing-and-partner-selection]]", "[[LINE-fs-outreach-and-offers]]"]
 sw_logStatus: accepted
 sw_statusNote: "the operator's practice, stated 2026-09-09 and clarified 2026-09-16; the repository's spec, the checklist seed and ADR-0007 still say 'best price, then delivery time' (DC-FS-0003); the eligibility rules beyond the Delamode case are unwritten"
-sw_covers: ["fs:fstransport/**", "fs:vault/10-spec/SRS.md", "fs:vault/20-decisions/ADR-0007-ranker-cold-start.md", "fs:instances/vault-ops/operating/operating-checklist.md"]
+sw_covers: [fs:fstransport/**, fs:vault/10-spec/SRS.md, fs:vault/20-decisions/ADR-0007-ranker-cold-start.md, fs:instances/vault-ops/operating/operating-checklist.md]
 sw_repos: [fs]
+dcterms_dateAccepted: 2026-10-18
+pav_curatedBy: [tuvastamata]
 ---
 
 # ADR-FS-0014: Offer selection: eligibility by destination and customer type first, then the trusted partner unless a competitor is more than 10 % cheaper

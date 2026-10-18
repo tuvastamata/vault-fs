@@ -3,12 +3,12 @@ id: ADR-FS-0015
 type: statement
 fed_kind: adr
 fed_modality: decision
-fed_status: proposed
+fed_status: accepted
 pav_authoredBy: eva
 pav_createdBy: claude-agent
-pav_createdWith: "Claude (Fable 5.1)"
+pav_createdWith: Claude (Fable 5.1)
 pav_authoredOn: 2026-09-16
-dcterms_title: "The customer confirms the marked-up price before any partner is confirmed; the operator sends that offer personally"
+dcterms_title: The customer confirms the marked-up price before any partner is confirmed; the operator sends that offer personally
 dcterms_language: en
 prov_hadPrimarySource: ["[[SRC-20260916-interview-partner-selection]]"]
 prov_wasQuotedFrom: ["[[SRC-20260916-interview-partner-selection#^q06]]", "[[SRC-20260916-interview-partner-selection#^q08]]"]
@@ -17,8 +17,10 @@ dcterms_subject: ["[[ELM-fs.engine.customerConfirm]]", "[[ELM-fs.engine.hitl]]",
 dcterms_isPartOf: ["[[LINE-fs-outreach-and-offers]]", "[[LINE-fs-build]]"]
 sw_logStatus: accepted
 sw_statusNote: "the practised order of steps, stated 2026-09-09 and confirmed 2026-09-16; in the operator's checklist as step 8; absent from the SRS, the process steps, the process flow and the checklist seed (DC-FS-0003)"
-sw_covers: ["fs:vault/10-spec/process-flow.md", "fs:vault/10-spec/process-steps.md", "fs:vault/10-spec/SRS.md", "fs:instances/vault-ops/operating/operating-checklist.md", "fs:fstransport/**"]
+sw_covers: [fs:vault/10-spec/process-flow.md, fs:vault/10-spec/process-steps.md, fs:vault/10-spec/SRS.md, fs:instances/vault-ops/operating/operating-checklist.md, fs:fstransport/**]
 sw_repos: [fs]
+dcterms_dateAccepted: 2026-10-18
+pav_curatedBy: [tuvastamata]
 ---
 
 # ADR-FS-0015: The customer confirms the marked-up price before any partner is confirmed; the operator sends that offer personally

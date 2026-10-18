@@ -3,10 +3,10 @@ id: ADR-FS-0013
 type: statement
 fed_kind: adr
 fed_modality: decision
-fed_status: proposed
+fed_status: accepted
 pav_authoredBy: eva
 pav_createdBy: claude-agent
-pav_createdWith: "Claude (Fable 5.1)"
+pav_createdWith: Claude (Fable 5.1)
 pav_authoredOn: 2026-08-27
 dcterms_title: "Standard or non-standard shipment: thresholds L 1200 × W 800 × H 1000 mm and 200 kg, dimensions from the HUUM sheet"
 dcterms_language: en
@@ -17,8 +17,10 @@ dcterms_subject: ["[[ELM-fs.engine.classify]]", "[[ELM-mail.order]]", "[[ADR-FS-
 dcterms_isPartOf: ["[[LINE-fs-pricing-and-partner-selection]]", "[[LINE-fs-data-sources]]"]
 sw_logStatus: accepted
 sw_statusNote: "in force in operations since the operator stated it on 2026-08-27; the wording for a single item is open (setup item 5, FIND-FS-0011); not yet in the repository's spec (DC-FS-0003)"
-sw_covers: ["fs:fstransport/**", "fs:vault/10-spec/SRS.md", "fs:vault/20-decisions/ADR-0001-standard-pallet-pricing-formula.md"]
+sw_covers: [fs:fstransport/**, fs:vault/10-spec/SRS.md, fs:vault/20-decisions/ADR-0001-standard-pallet-pricing-formula.md]
 sw_repos: [fs]
+dcterms_dateAccepted: 2026-10-18
+pav_curatedBy: [tuvastamata]
 ---
 
 # ADR-FS-0013: Standard or non-standard shipment: thresholds L 1200 × W 800 × H 1000 mm and 200 kg, dimensions from the HUUM sheet

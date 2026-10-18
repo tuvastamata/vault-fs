@@ -3,10 +3,10 @@ id: ADR-FS-0016
 type: statement
 fed_kind: adr
 fed_modality: decision
-fed_status: proposed
+fed_status: accepted
 pav_authoredBy: eva
 pav_createdBy: claude-agent
-pav_createdWith: "Claude (Fable 5.1)"
+pav_createdWith: Claude (Fable 5.1)
 pav_authoredOn: 2026-09-16
 dcterms_title: "Trust and delegation: everything but the final choice; a step is trusted after 20 successful runs with a log; the send-approval gate lifts after 20 full cycles on the operator's word"
 dcterms_language: en
@@ -17,8 +17,10 @@ dcterms_subject: ["[[ELM-fs.engine.hitl]]", "[[ELM-desktop.gmailConnector]]", "[
 dcterms_isPartOf: ["[[LINE-fs-build]]", "[[LINE-fs-outreach-and-offers]]"]
 sw_logStatus: accepted
 sw_statusNote: "the operator's rule of 2026-09-16, corrected the same day from 'permanent' to 'graduated'; nothing counts cycles yet (setup item 13); the SRS and the approval-gate seed still describe a permanent gate (DC-FS-0003)"
-sw_covers: ["fs:instances/vault-ops/operating/approval-gate.md", "fs:vault/10-spec/SRS.md", "fs:fstransport/**"]
+sw_covers: [fs:instances/vault-ops/operating/approval-gate.md, fs:vault/10-spec/SRS.md, fs:fstransport/**]
 sw_repos: [fs]
+dcterms_dateAccepted: 2026-10-18
+pav_curatedBy: [tuvastamata]
 ---
 
 # ADR-FS-0016: Trust and delegation: everything but the final choice; a step is trusted after 20 successful runs with a log; the send-approval gate lifts after 20 full cycles on the operator's word
