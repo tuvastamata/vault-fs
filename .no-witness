@@ -1,0 +1,1 @@
+This vault has its own commit discipline: the owner commits (README.md, "Sweep after a push"; VER-federation-v3). The cron witness metavault/tools/witness.sh skips a vault on the presence of this file. Placed 2026-10-18 at the owner's request.
